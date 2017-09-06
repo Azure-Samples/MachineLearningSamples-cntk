@@ -1,0 +1,5 @@
+type: "docker"
+baseDockerImage: "microsoft/mmlspark:0.7"
+
+#baseDockerImage: "microsoft/mmlspark:gpu"
+#nvidiaDocker: true
