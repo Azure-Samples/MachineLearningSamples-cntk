@@ -232,8 +232,8 @@ if __name__ == '__main__':
         
         trainer.train_minibatch(data)
         batchsize, loss, error = print_training_progress(trainer, i, training_progress_output_freq, verbose=1)
-        errors.append(error)
-        losses.append(loss)
+        errors.append(float(error))
+        losses.append(float(loss))
     
     # log the losses
     #run_logger.log("Loss", losses)
