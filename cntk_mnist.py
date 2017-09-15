@@ -290,3 +290,6 @@ if __name__ == '__main__':
 
     print("Label    :", gtlabel[:25])
     print("Predicted:", pred)
+    
+    # save model to outputs folder
+    z.save('outputs/cntk.model')
