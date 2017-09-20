@@ -11,3 +11,7 @@ dependencies:
   - python=3.5.2
   - pip:
     - https://cntk.ai/PythonWheel/CPU-Only/cntk-2.1-cp35-cp35m-linux_x86_64.whl
+    # The API for Azure Machine Learning Model Management Service.
+    # Details: https://github.com/Azure/Machine-Learning-Operationalization
+    - azure-ml-api-sdk==0.1.0a9
+    

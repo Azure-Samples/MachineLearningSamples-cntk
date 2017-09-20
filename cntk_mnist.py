@@ -14,7 +14,7 @@ import time
 import pandas 
 
 import cntk as C
-from azureml.sdk import data_collector
+from azureml.logging import get_azureml_logger
 
 # Functions to load MNIST images and unpack into train and test set.
 # - loadData reads image data and formats into a 28x28 long array
@@ -120,7 +120,7 @@ def create_model(features):
 
 
 if __name__ == '__main__':
-    run_logger = data_collector.current_run() 
+    run_logger = get_azureml_logger() 
 
     try: 
         from urllib.request import urlretrieve 
@@ -232,12 +232,13 @@ if __name__ == '__main__':
         
         trainer.train_minibatch(data)
         batchsize, loss, error = print_training_progress(trainer, i, training_progress_output_freq, verbose=1)
-        errors.append({'Error': error})
-        losses.append({'Loss': loss})
+        if (error != 'NA') and (loss != 'NA'):
+            errors.append(float(error))
+            losses.append(float(loss))
     
     # log the losses
-    #run_logger.log(pandas.DataFrame(losses))
-    run_logger.log(pandas.DataFrame(errors))
+    run_logger.log("Loss", losses)
+    run_logger.log("Error",errors)
 
     # Read the training data
     reader_test = create_reader(test_file, False, input_dim, num_output_classes)
@@ -289,3 +290,6 @@ if __name__ == '__main__':
 
     print("Label    :", gtlabel[:25])
     print("Predicted:", pred)
+    
+    # save model to outputs folder
+    z.save('outputs/cntk.model')
