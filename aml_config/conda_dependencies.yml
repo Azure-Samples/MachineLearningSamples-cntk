@@ -22,6 +22,7 @@ dependencies:
   - ipykernel=4.6.1
 
   - pip:
+    # CNTK library for running on CPU 
     - https://cntk.ai/PythonWheel/CPU-Only/cntk-2.1-cp35-cp35m-linux_x86_64.whl
 
     # The API for Azure Machine Learning Model Management Service.
