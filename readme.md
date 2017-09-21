@@ -82,6 +82,6 @@ dependencies:
 ### Step 4. Run the script.
 Now you are ready to run the script.
 ```
-$ az ml experiment submit -c myvm tf_mnist.py
+$ az ml experiment submit -c myvm cntk_mnist.py
 ```
 You notice that the script finishes faster than using CPU. The command-line outputs should indicate that GPU is used for executing this script.
