@@ -127,7 +127,7 @@ if __name__ == '__main__':
     except ImportError: 
         from urllib import urlretrieve
 
-    # Select the right target device when this notebook is being tested:
+    # Select the right target device when this script is being used:
     if 'TEST_DEVICE' in os.environ:
         if os.environ['TEST_DEVICE'] == 'cpu':
             C.device.try_set_default_device(C.device.cpu())
