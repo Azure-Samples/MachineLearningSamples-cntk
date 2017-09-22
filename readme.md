@@ -130,4 +130,4 @@ Now you are ready to run the script.
 ```
 $ az ml experiment submit -c myvm cntk_mnist.py
 ```
-You should notice the script finishes significantly faster than than if you use CPU. And the command-line outputs should indicate that GPU is used for executing this script.
+You should notice the script finishes significantly faster than if you use CPU. And the command-line outputs should indicate that GPU is used for executing this script.
