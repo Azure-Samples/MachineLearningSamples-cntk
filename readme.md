@@ -105,11 +105,11 @@ The above command creates a `myvm.compute` and `myvm.runconfig` file under the `
     
     In `conda_dependencies.yml` file, replace the CNTK library URL with the GPU version:
 
-     - `https://cntk.ai/PythonWheel/GPU/cntk-2.2-cp35-cp35m-linux_x86_64.whl`
+     - `https://cntk.ai/PythonWheel/GPU/cntk-2.1-cp35-cp35m-linux_x86_64.whl`
 
     Or you can use the 1-bit SGD version:
 
-    - `https://cntk.ai/PythonWheel/GPU-1bit-SGD/cntk-2.2-cp35-cp35m-linux_x86_64.whl`
+    - `https://cntk.ai/PythonWheel/GPU-1bit-SGD/cntk-2.1-cp35-cp35m-linux_x86_64.whl`
 
     You can find the latest CNTK Python library for Linux at the [CNTK documentation site](https://docs.microsoft.com/en-us/cognitive-toolkit/Setup-Linux-Python?tabs=cntkpy22).
 
