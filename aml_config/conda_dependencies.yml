@@ -13,6 +13,10 @@
 
 name: project_environment
 
+channels:
+  # Required for jasper
+  - conda-forge
+
 dependencies:
   # The python interpreter version.
   # Currently Azure ML Workbench only supports 3.5.2.
@@ -21,9 +25,19 @@ dependencies:
   # Required for Jupyter Notebooks.
   - ipykernel=4.6.1
 
+  # Required for CNTK 2.2
+  - libpng=1.2
+  - jasper
+  
   - pip:
     # CNTK library for running on CPU 
-    - https://cntk.ai/PythonWheel/CPU-Only/cntk-2.1-cp35-cp35m-linux_x86_64.whl
+    - https://cntk.ai/PythonWheel/CPU-Only/cntk-2.2-cp35-cp35m-linux_x86_64.whl
+
+    # CNTK library for running on GPU 
+    #- https://cntk.ai/PythonWheel/GPU/cntk-2.2-cp35-cp35m-linux_x86_64.whl
+
+    # CNTK with 1-bit SGD library for running on GPU 
+    #- https://cntk.ai/PythonWheel/GPU-1bit-SGD/cntk-2.2-cp35-cp35m-linux_x86_64.whl
 
     # The API for Azure Machine Learning Model Management Service.
     # Details: https://github.com/Azure/Machine-Learning-Operationalization
