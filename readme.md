@@ -1,5 +1,6 @@
 # Classifying MNIST dataset using CNTK
 
+> **NOTE** This content is no longer maintained. Visit the [Azure Machine Learning Notebook](https://github.com/Azure/MachineLearningNotebooks) project for sample Jupyter notebooks for ML and deep learning with Azure Machine Learning.
 This sample uses CNTK to create a multi-layer neural network to classify MNIST dataset.
 
 The code in this sample is adapted from the following CNTK tutorials:
